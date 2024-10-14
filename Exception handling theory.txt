@@ -1,0 +1,85 @@
+*L1*
+
+try
+{
+	Risky code
+
+}
+
+catch(Exception e)		e-->exception object
+{
+	Alternate code
+	
+}
+
+-->Whenever the exception is found JVM creates an object in which it stores
+	1.Exception name
+	2.Description 
+	3.StackTrace
+
+To print exception 
+
+	S.O.P(e)(1,2 )
+	e.printStackTrace()
+
+*L2*
+
+Use of finally keyword:To execute certain block of code even when we are uncertain if there is exception or not.
+If catch block doesnot execute finally executes.
+Finally always executes.
+
+try						try
+{risky code}					{}
+
+catch(Exception e)				finally
+{}						{}
+
+finally
+{cleanup code}
+
+
+throw-->creates an exception from user's end
+	use super keyword to pass argument to parent.
+
+throw new ArithmeticException();
+
+Used for user defined exception (not for predefined exception) 
+
+CREATE EXCEPTIONS
+1.CHECKED:class Test extends Exception
+2.UNCHECKED:class Test extends RuntimeException
+
+FileInputStream--->To read file in a folder.
+(.io)
+
+
+throws keyword----->Declares an exception and makes the program compile 		    without actually handling the exception.The next person 		    can handle it accordingly.
+**Only for checked exception
+
+EG.
+void input() throws FileNotFoundException     //I donot handle exception here
+{
+	FileInputStream fis=new FileInputStream("D:/java");
+	
+	//Faulty code
+}
+
+class Ex			     //I handle exception here while using it
+{
+	PSVM(String [] args)
+	{
+		Ex e=new Ex();
+		try
+		{
+			e.input();
+		}
+	
+		catch(FileNotFoundException e)
+		{	
+			S.O.P("exception here");
+		}
+	}
+
+}
+
+**Always use try catch with throws else main method will be terminated abnormally.

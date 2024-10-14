@@ -1,0 +1,34 @@
+Thread.currentThread().getName();	--->get name of current thread
+
+Thread.currentThread().setName();	--->set name of current thread
+
+Daemon thread
+
+public final void setDaemon(Boolean b);	----->Set daemon thread
+
+public final boolean isDaemon(;)	----->Find if is daemon
+
+Sleep method
+
+public static native void sleep(long mili) throws InterruptedException
+
+public static void sleep(long mili,int name) throws InterruptedException
+
+try
+{
+	Thread.sleep(1000);
+	S.O.P();
+}
+
+catch(Exception e)
+{
+	S.O.P(e);
+}
+
+join() method
+
+public final void join() throws InterruptedException
+
+public final synchronised void join(long mili) throws InterruptedException
+
+public final synchronised void join(long m,int ns) throws InterruptedException
