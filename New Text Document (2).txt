@@ -1,0 +1,28 @@
+import java.util.*;
+class Base
+{
+	protected float r,area;
+	public void calc(int r)
+	{
+		area=3.14f*r*r;
+	}
+}
+
+class Display extends Base
+{
+	Scanner sc=new Scanner(System.in);
+	private float n,s;
+	n=sc.nextFloat();
+	s=super.calc(n);
+}
+
+classF1
+{
+	public static void main(String [] args)
+	{
+		Display d=new Display();
+		
+		System.out.println("The area is"+s);
+
+	}
+}
